@@ -8,13 +8,12 @@ python sys.path.append(vim.eval('expand("<sfile>:h")'))
 " --------------------------------
 "  Function(s)
 " --------------------------------
-function! TemplateExample()
+function! Faker(provider, ...)
 python << endOfPython
 
-from vim_faker import vim_faker_example
+from vim_faker import vim_faker
 
-for n in range(5):
-    print(vim_faker_example())
+    print(vim_faker(provider))
 
 endOfPython
 endfunction
@@ -22,4 +21,4 @@ endfunction
 " --------------------------------
 "  Expose our commands to the user
 " --------------------------------
-command! Example call TemplateExample()
+command! faker call Faker()

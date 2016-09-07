@@ -16,7 +16,24 @@ Use your plugin manager of choice.
   - Add `Plug 'https://github.com/khornberg/vim-faker'` to .vimrc
   - Run `:PlugInstall`
 
-## Todo
+## Requirements
 
-1. Write a plugin
-2. Write documentation
+[`faker`](https://github.com/joke2k/faker)
+
+Install with `pip install faker`
+
+
+## Usage
+
+`:faker name`
+
+`:faker sentences nb=3`
+
+`:faker <provider> [l10n=<locale>] <kwargs>`
+
+[Providers](https://faker.readthedocs.io/en/latest/providers.html)
+
+### Localization
+
+Pass `l10n=<locale>` e.g. `l10n=fa_IR`
+[Locale list](https://faker.readthedocs.io/en/latest/locales.html)
