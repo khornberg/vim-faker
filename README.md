@@ -37,6 +37,8 @@ My name is name
 
 While your cursor is over the second `name` call `:Faker`
 
+![doc/capture.gif](doc/capture.gif)
+
 ### Example Keybinding
 
 `noremap <leader>k :call Faker()<cr>`
