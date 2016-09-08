@@ -22,18 +22,25 @@ Use your plugin manager of choice.
 
 Install with `pip install faker`
 
-
 ## Usage
 
-`:faker name`
-
-`:faker sentences nb=3`
-
-`:faker <provider> [l10n=<locale>] <kwargs>`
+In a buffer add the provider and call `Faker`
 
 [Providers](https://faker.readthedocs.io/en/latest/providers.html)
 
-### Localization
+### Example
 
-Pass `l10n=<locale>` e.g. `l10n=fa_IR`
-[Locale list](https://faker.readthedocs.io/en/latest/locales.html)
+Your buffer looks like
+```
+My name is name
+```
+
+While your cursor is over the second `name` call `:Faker`
+
+### Example Keybinding
+
+`noremap <leader>k :call Faker()<cr>`
+
+## Todo
+
+Support localization and kwargs for providers.
