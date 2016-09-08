@@ -23,4 +23,4 @@ endfunction
 " --------------------------------
 "  Expose our commands to the user
 " --------------------------------
-command! faker call Faker()
+command! Faker call Faker()
