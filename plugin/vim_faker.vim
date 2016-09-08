@@ -8,12 +8,14 @@ python sys.path.append(vim.eval('expand("<sfile>:h")'))
 " --------------------------------
 "  Function(s)
 " --------------------------------
-function! Faker(provider, ...)
+function! Faker()
 python << endOfPython
 
 from vim_faker import vim_faker
 
-    print(vim_faker(provider))
+current_word = vim.eval('expand("<cword>")')
+result = vim_faker(current_word)
+vim.command("normal BcW%s" % result)
 
 endOfPython
 endfunction
