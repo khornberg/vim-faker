@@ -7,7 +7,7 @@ class VimFakerTests(unittest.TestCase):
 
     def test_provider(self):
         result = sut.vim_faker('name')
-        self.assertEqual(unicode, type(result))
+        self.assertEqual(str, type(result))
 
     def test_kwargs(self):
         result = sut.vim_faker('iso8601', tzinfo=pytz.timezone('UTC'))

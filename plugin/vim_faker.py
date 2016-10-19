@@ -4,4 +4,4 @@ def vim_faker(provider, **kwargs):
         fake = Factory.create(kwargs.pop('l10n')) if kwargs.get('l10n') else Faker()
         return fake.__getattribute__(provider)(**kwargs)
     except Exception as e:
-        return e.message
+        return e.args[0]
