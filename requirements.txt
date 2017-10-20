@@ -1,3 +1,3 @@
 faker
 pytz
-pytest==3.2.2
+pytest==3.2.3
